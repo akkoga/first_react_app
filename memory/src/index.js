@@ -30,12 +30,18 @@ ReactDOM.render(
 //----------------------------------------
 
 //creation d'un composant pour le h1
-function FirstTitle(){
-  return React.createElement('h1', {}, 'First title')
+//premieres props
+//le parametre name a comme valeur par defaut nom
+//si laissez sans  ='value' alors la valeur par defaut sera null
+function FirstTitle({name = 'nom'}){
+  return <span>first title name param => {name}</span>
 }
 
 ReactDOM.render(
-  React.createElement(FirstTitle),
+  <div>
+    <h1><FirstTitle name="waifu" /></h1>
+    <h2><FirstTitle /></h2>
+  </div>,
   document.getElementById('titre')
 )
 //---------------------------------------

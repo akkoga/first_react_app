@@ -4,8 +4,9 @@ import GuessCount from './GuessCount'
 
 class App extends React.Component {
   //fonction pour le onclick sur une carte
-  cardClick(card){
-    console.log(card, "clicked")
+  cardClick(card, feedback){
+    const HIDDEN_SYMBOL = '❓'
+    console.log(feedback === "hidden" ? HIDDEN_SYMBOL+"dont try to cheat : "+feedback : card+"clicked")
   }
 
   render() {

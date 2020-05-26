@@ -60,6 +60,20 @@ ReactDOM.render(
 
 //---------------------------------------
 
+//exemple simple de button avec props
+
+// const Greeter = ({ whom }) => (
+//   <button onClick={() => console.log(`Bonjour ${whom} !`)}>
+//     Vas-y, clique !
+//   </button>
+// )
+
+// ReactDOM.render(
+//   <Greeter whom="t" />, 
+//   document.getElementById('root')
+// )
+
+//---------------------------------------
 
 
 

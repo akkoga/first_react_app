@@ -11,8 +11,8 @@ feedback indique si la carte est visible ou non
 pourla div on met des accolades car jsx ne peut pas faire de dynamique sans
 les backquotes sont utilisés pour la syntaxe es2015 et permette de mettre des valeurs dynamiques
 */
-const Card = ({ card, feedback }) => (
-    <div className={`card ${feedback}`}>
+const Card = ({ card, feedback, onClick }) => (
+    <div className={`card ${feedback}`} onClick={() => onClick(card)}>
       <span className="symbol">
         {/* si le feedback est hidden alors se sera hidden symbole qui sera utilisé */}
         {feedback === 'hidden' ? HIDDEN_SYMBOL : card}

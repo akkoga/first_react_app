@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -47,6 +46,12 @@ ReactDOM.render(
 //---------------------------------------
 
 //creation d'un composant avec jsx
+
+// Avec JSX
+//<User first="John" last="Smith" />
+
+// sans JSX
+//React.createElement(User, { first: 'John', last: 'Smith' })
 function ComponentJsx(){
   return <p>jsx component</p>
 }
@@ -55,6 +60,10 @@ ReactDOM.render(
   <ComponentJsx />,
   document.getElementById('jsxComponent')
 )
+
+//---------------------------------------
+
+
 
 
 // If you want your app to work offline and load faster, you can change

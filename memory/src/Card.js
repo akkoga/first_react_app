@@ -14,6 +14,7 @@ les backquotes sont utilisés pour la syntaxe es2015 et permette de mettre des v
 const Card = ({ card, feedback }) => (
     <div className={`card ${feedback}`}>
       <span className="symbol">
+        {/* si le feedback est hidden alors se sera hidden symbole qui sera utilisé */}
         {feedback === 'hidden' ? HIDDEN_SYMBOL : card}
       </span>
     </div>

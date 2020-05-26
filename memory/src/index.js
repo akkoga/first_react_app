@@ -2,13 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'))
+registerServiceWorker()
 
 //creation d'un composant
 function CoolComponent() {
@@ -22,10 +19,10 @@ function CoolComponent() {
 }
 
 //permet d'afficher le composant dans la page web
-ReactDOM.render(
-  React.createElement(CoolComponent),
-  document.getElementById('root')
-)
+// ReactDOM.render(
+//   React.createElement(CoolComponent),
+//   document.getElementById('root')
+// )
 //----------------------------------------
 
 //creation d'un composant pour le h1

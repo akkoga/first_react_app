@@ -6,10 +6,13 @@ class App extends React.Component {
   //fonction pour le onclick sur une carte
   cardClick(card, feedback){
     const HIDDEN_SYMBOL = '❓'
-    console.log(feedback === "hidden" ? HIDDEN_SYMBOL+"dont try to cheat : "+feedback : card+"clicked")
+    console.log(feedback === "hidden" ? HIDDEN_SYMBOL+"dont try to cheat" : card+"clicked")
   }
 
   render() {
+    //permet de savoir quand les secondes sont pairs
+    const won = new Date().getSeconds() % 2 === 0
+
     return (
       <div className="memory">
         <GuessCount guesses={0} />
@@ -21,6 +24,7 @@ class App extends React.Component {
         <Card card="🎩" feedback="visible" onClick = {this.cardClick}/>
         <Card card="🐶" feedback="hidden" onClick = {this.cardClick}/>
         <Card card="🐱" feedback="justMatched" onClick = {this.cardClick}/>
+        {won && <p>GAGNÉ !</p>}
       </div>
     )
   }
